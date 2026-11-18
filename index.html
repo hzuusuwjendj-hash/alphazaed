@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<!-- Alpha3Zaed: ساختار صفحه. ظاهر در style.css و رفتار سایت در script.js است. هر سه فایل باید کنار هم باشند. -->
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Alpha3Zaed | شبکه و بازار امنیت سایبری</title>
+<meta name="description" content="Alpha3Zaed؛ شبکه اجتماعی و بازار امنیت سایبری: خرید محصولات امنیتی، خدمات تست نفوذ، دوره‌های آموزشی و ابزارهای رایگان بررسی رمز و لینک.">
+<meta name="robots" content="index,follow">
+<meta name="theme-color" content="#050608">
+<meta property="og:type" content="website"><meta property="og:title" content="Alpha3Zaed | شبکه و بازار امنیت سایبری"><meta property="og:description" content="خرید و فروش محصولات و خدمات امنیت سایبری، آموزش و شبکه اجتماعی متخصصان.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Alpha3Zaed","inLanguage":"fa","description":"شبکه و بازار امنیت سایبری"}</script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;800&family=Lalezar&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<noscript><h1>Alpha3Zaed، شبکه و بازار امنیت سایبری</h1><p>برای استفاده از سایت جاوااسکریپت را فعال کنید. Alpha3Zaed: بازار، شبکه و ابزارهای امنیت سایبری.</p></noscript>
+<div class="alert"><div>هشدار زنده: موج جدید فیشینگ بانکی شناسایی شد · آسیب‌پذیری روز صفر در روترهای خانگی گزارش شده · احراز هویت دومرحله‌ای را فعال کنید</div></div>
+<header>
+ <div class="bar">
+  <div class="logo"><i></i>Alpha3<b>Zaed</b><small>نگهبان دروازه</small></div>
+  <input class="search" id="q" placeholder="جستجوی محصول یا خدمت…" aria-label="جستجو">
+  <button class="btn r" id="authBtn">ثبت‌نام / ورود</button><button class="cartbtn" id="cartBtn">سبد<span id="cnt">0</span></button>
+ </div>
+ <nav role="tablist" id="nav">
+  <button role="tab" aria-selected="true" data-t="feed">شاهراه (شبکه)</button>
+  <button role="tab" aria-selected="false" data-t="shop">بازار شاهنشاهی</button>
+  <button role="tab" aria-selected="false" data-t="tools">زرادخانه</button>
+  <button role="tab" aria-selected="false" data-t="chat">پیک شاهی<sup id="unread" class="hide">0</sup></button>
+  <button role="tab" aria-selected="false" data-t="me">پروفایل</button>
+ </nav>
+ </header>
+
+<main>
+<section>
+ <div id="feed">
+  <div class="hero"><small>پارسه · پایتخت امنیت سایبری</small><h1>نگهبانان شاهراه‌ی دیجیتال</h1><p>با الهام از کتیبه‌ی بیستون که دروغ را ریشه‌ی آشوب می‌داند: ما فریب را شناسایی و نابود می‌کنیم. تهدید را بشناس، بخر، بفروش و بی‌امان بجنگ.</p><div class="btns"><button class="btn y" id="heroSign">پیوستن به جاویدانان</button><button class="btn g" id="heroIn">ورود به تخت‌جمشید</button><button class="btn r" data-go="shop">بازار شاهنشاهی</button></div></div>
+  <div class="pillars"><button data-go="feed"><b>شاهراه</b><small>شبکه‌ی متخصصان</small></button><button data-go="shop"><b>دروازه‌ی ملل</b><small>بازار و خدمات</small></button><button data-go="tools"><b>زرادخانه</b><small>ابزار نگهبانی</small></button><button data-go="chat"><b>پیک شاهی</b><small>پیام‌رسان</small></button></div>
+  <div class="card stories" id="stories"></div>
+  <div class="card new"><textarea id="np" placeholder="چه خبر امنیتی‌ای داری؟" aria-label="متن پست"></textarea>
+   <select id="nt" style="width:auto" aria-label="دسته"><option>آموزش</option><option>خبر</option><option>تست نفوذ</option><option>سؤال</option></select>
+   <button class="btn g" id="pub">انتشار پست</button></div>
+  <div id="posts"></div>
+ </div>
+
+ <div id="shop" class="hide">
+  <div class="chips" id="chips"></div>
+  <div class="grid" id="grid"></div>
+ </div>
+
+ <div id="tools" class="hide">
+  <div class="card tool"><h3>بررسی و ساخت رمز عبور</h3><p>رمز فقط در مرورگر شما پردازش می‌شود.</p>
+   <input id="pw" type="text" placeholder="Password" autocomplete="off" spellcheck="false">
+   <div class="meter"><i id="pwBar" style="width:0"></i></div>
+   <div class="btns"><span class="res" id="pwRes">یک رمز وارد کنید</span><button class="btn g" id="gen" style="margin-inline-start:auto">ساخت رمز قوی</button></div></div>
+  <div class="card tool"><h3>بررسی لینک مشکوک</h3><p>نشانه‌های رایج فیشینگ را در آدرس بررسی کنید.</p>
+   <input id="url" placeholder="https://example.com/login" spellcheck="false"><button class="btn y" id="urlBtn">بررسی لینک</button><div class="res" id="urlRes"></div></div>
+  <div class="card tool"><h3>تولید هش SHA-256</h3><p>اثر انگشت یک متن برای بررسی صحت فایل‌ها و داده‌ها.</p>
+   <input id="hin" placeholder="متن ورودی" spellcheck="false"><div class="res" id="hout" style="direction:ltr;font-family:Consolas,monospace;font-size:13px"></div></div>
+  <div class="card tool"><h3>رمزگذاری Base64</h3><p>تبدیل متن به Base64 و برعکس. این رمزنگاری نیست و فقط کدگذاری است.</p>
+   <textarea id="b64" rows="3" placeholder="متن یا Base64" spellcheck="false"></textarea>
+   <div class="btns"><button class="btn" id="enc">کدگذاری</button><button class="btn" id="dec">رمزگشایی</button></div><div class="res" id="b64o" style="direction:ltr"></div></div>
+ </div>
+
+ <div id="chat" class="hide"><div class="card chat">
+  <div class="cl" id="cl" role="tablist"></div>
+  <div class="cw"><div class="msgs" id="msgs"></div>
+   <form class="cin" id="cf"><input id="ci" placeholder="پیام بنویس…" aria-label="پیام"><button class="btn" type="submit">ارسال</button></form></div>
+ </div></div>
+
+ <div id="me" class="hide">
+  <div class="card prof"><div style="display:flex;gap:14px;align-items:center">
+   <div class="ring"><div class="av" id="mav" style="background:var(--g)">ش</div></div>
+   <div><h3 id="mname">کاربر مهمان</h3><small style="color:var(--mut)">عضو Alpha3Zaed</small></div>
+   <button class="btn" id="edit" style="margin-inline-start:auto">ویرایش نام</button></div>
+   <div class="pst"><div><b id="sP">0</b>پست</div><div><b id="sS">0</b>ذخیره‌شده</div><div><b id="sO">0</b>سفارش</div></div>
+   <div class="btns"><button class="btn g" id="tfa">فعال‌سازی احراز هویت دومرحله‌ای</button><button class="btn y" id="theme">تغییر تم</button></div></div>
+  <div class="card prof"><h3>سفارش‌های من</h3><div id="orders"><p style="color:var(--mut)">هنوز سفارشی ثبت نشده است.</p></div></div>
+ </div>
+</section>
+
+<aside>
+ <div class="card"><h4>وضعیت امنیت شما</h4>
+  <div class="row"><span>امتیاز حساب</span><b id="score">72٪</b></div>
+  <div class="meter"><i id="scoreBar" style="width:72%;background:linear-gradient(90deg,var(--r),var(--y),var(--g))"></i></div>
+  <div class="row"><span>احراز هویت دومرحله‌ای</span><b id="tfaS" style="color:var(--r)">غیرفعال</b></div></div>
+ <div class="card"><h4>تهدیدهای امروز</h4>
+  <div class="row"><span>فیشینگ</span><b style="color:var(--r)">بالا</b></div><div class="meter"><i style="width:84%;background:var(--r)"></i></div>
+  <div class="row"><span>باج‌افزار</span><b style="color:var(--y)">متوسط</b></div><div class="meter"><i style="width:55%;background:var(--y)"></i></div>
+  <div class="row"><span>نشت اطلاعات</span><b style="color:var(--g)">کم</b></div><div class="meter"><i style="width:22%;background:var(--g)"></i></div></div>
+ <div class="card"><h4>اعلان‌ها</h4><div id="notes"></div></div>
+</aside>
+</main>
+
+<footer style="max-width:1120px;margin:8px auto 24px;padding:0 16px;color:var(--mut);font-size:13px;display:flex;gap:16px;flex-wrap:wrap"><span>© Alpha3Zaed</span></footer>
+<div class="drawer" id="drawer" aria-label="سبد خرید">
+ <div style="display:flex;justify-content:space-between;align-items:center"><h3>سبد خرید</h3><button id="close" aria-label="بستن">✕</button></div>
+ <div id="items"></div>
+ <input id="code" placeholder="کد تخفیف (مثلاً ALPHA10)" style="margin:10px 0;direction:ltr">
+ <div class="li"><span>جمع کل</span><b class="price" id="sum">0</b></div>
+ <div id="cmsg" style="color:var(--mut);font-size:13px;margin:6px 0"></div>
+ <button class="btn g" style="width:100%" id="buy">ثبت سفارش</button>
+</div>
+
+<div class="modal hide" id="authM"><div class="frm"><div style="display:flex;justify-content:space-between;align-items:center"><h3 id="authT">پیوستن به جاویدانان</h3><button id="authX" aria-label="بستن">✕</button></div>
+ <div class="seg"><button data-m="up" aria-pressed="true">ثبت‌نام</button><button data-m="in" aria-pressed="false">ورود</button></div>
+ <div id="authMsg" style="color:var(--y);font-size:13px"></div>
+ <div id="upOnly"><label for="aN">نام نمایشی</label><input id="aN" maxlength="20" autocomplete="nickname"><label for="aR">نقش شما</label><select id="aR"><option>خریدار</option><option>فروشنده</option><option>متخصص امنیت</option></select></div>
+ <label for="aE">ایمیل</label><input id="aE" type="email" dir="ltr" autocomplete="email">
+ <label for="aP">رمز عبور (حداقل ۸ نویسه)</label><input id="aP" type="password" dir="ltr" autocomplete="current-password">
+ <label id="tl"><input id="aT" type="checkbox">قوانین Alpha3Zaed را می‌پذیرم</label>
+ <div class="err" id="aErr"></div><button class="btn y" id="aGo" style="width:100%">ثبت‌نام</button></div></div>
+<div class="modal hide" id="modal"><div><h3>نام شما چیست؟</h3><p style="color:var(--mut);margin:6px 0 12px">نام فقط روی همین دستگاه ذخیره می‌شود.</p>
+ <input id="nm" placeholder="نام نمایشی" maxlength="20"><div class="btns" style="margin-top:12px"><button class="btn g" id="nmOk">ذخیره</button><button class="btn r" id="nmNo">بعداً</button></div></div></div>
+
+<script src="script.js"></script>
+</body>
+</html>
